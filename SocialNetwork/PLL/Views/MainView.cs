@@ -7,10 +7,11 @@ namespace SocialNetwork.PLL.Views
 {
     public class MainView
     {
-        public void Show()
+        public int Show()
         {
             Console.WriteLine("Войти в профиль (нажмите 1)");
             Console.WriteLine("Зарегистрироваться (нажмите 2)");
+            Console.WriteLine("Завершить программу (нажмите 3)");
 
             switch (Console.ReadLine())
             {
@@ -25,7 +26,14 @@ namespace SocialNetwork.PLL.Views
                         Program.registrationView.Show();
                         break;
                     }
+
+                case "3":
+                    {
+                        return 0;
+                    }
             }
+
+            return 1;
         }
     }
 }

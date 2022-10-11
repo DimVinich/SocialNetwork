@@ -39,7 +39,7 @@ namespace SocialNetwork
 
             while (true)
             {
-                mainView.Show();
+                if (mainView.Show() == 0) break;
             }
         }
     }
